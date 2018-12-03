@@ -6,7 +6,9 @@ import com.study.im.common.Request;
 import io.netty.channel.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.lang.annotation.Target;
 
 /**
@@ -16,6 +18,7 @@ import java.lang.annotation.Target;
  * @create: 2018-12-03 17:42
  **/
 @CmdId(id = "00000")
+@Component
 public class TestCommand implements ICommand {
 
     private static final Logger logger = LoggerFactory.getLogger(TestCommand.class);

@@ -21,7 +21,11 @@ public class CacheFactory {
     public void init() {
         if (caches != null) {
             for (ICache cache : caches) {
-                cache.load();
+                try {
+                    cache.load();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
             logger.info("所有缓存加载完毕...");
         } else {
